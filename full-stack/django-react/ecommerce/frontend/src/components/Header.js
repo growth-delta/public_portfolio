@@ -1,12 +1,22 @@
 import React from 'react'
-import { Navbar, Nav, Container, Row } from 'react-bootstrap';
+import { Navbar, Nav, Container, Row, Col } from 'react-bootstrap';
 import logo from '../resources/logo.png';
 
 function Header() {
   return (
     <header>
-      <Navbar bg="dark" variant='dark' expand="lg" collapseOnSelect>
 
+      <div className='bg-warning'>
+        <Row>
+          <Col className='text-center py-3'>
+            <h5>
+              <i class="fa-solid fa-truck-fast"></i> FREE SHIPPING <i class="fa-solid fa-truck-fast"></i> OVER <i class="fa-solid fa-dollar-sign"></i><b>50</b>
+            </h5>
+          </Col>
+        </Row>
+      </div>
+
+      <Navbar bg="dark" variant='dark' expand="lg" collapseOnSelect>
         <Container>
           <Navbar.Brand href="/">
             <img
@@ -24,13 +34,13 @@ function Header() {
               style={{ maxHeight: '100px' }}
               navbarScroll
             >
-              <Nav.Link href="/login"> Login</Nav.Link>
+              <Nav.Link href="/login"><i class="fa-regular fa-user"></i> Login</Nav.Link>
               <Nav.Link href="/cart"><i class="fa-solid fa-cart-shopping"></i> Cart</Nav.Link>
             </Nav>
           </Navbar.Collapse>
         </Container>
-
       </Navbar>
+
     </header>
   )
 }
