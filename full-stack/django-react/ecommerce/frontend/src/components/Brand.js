@@ -1,9 +1,9 @@
 import React from 'react';
 
 function Brand() {
-  const brandName = 'Big Screw; Bolt Supply';
+  const brandName = 'Freedom Forged';
   return (
-    <b>{brandName}</b>
+    <>{brandName}</>
   );
 }
 

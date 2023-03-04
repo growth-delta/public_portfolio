@@ -1,12 +1,13 @@
 import React from 'react'
 import { Container, Row, Col } from 'react-bootstrap';
+import Brand from './Brand';
 
 function Footer() {
   return (
     <footer>
       <Container>
         <Row>
-          <Col className='text-center py-3'>Copyright &copy; Big Commerce</Col>
+          <Col className='text-center py-3'>Copyright &copy; <Brand/></Col>
         </Row>
       </Container>
     </footer>
