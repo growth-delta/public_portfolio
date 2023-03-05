@@ -1,7 +1,8 @@
 import React from 'react'
 import { Navbar, Nav, Container, Row, Col } from 'react-bootstrap';
-// import logo from '../../../resources/logo.png';
+import logo from '../logo.png';
 import Brand from './Brand.js'
+import { LinkContainer } from 'react-router-bootstrap';
 
 function Header() {
   return (
@@ -17,19 +18,27 @@ function Header() {
       </div>
       <Navbar bg="dark" variant='dark' expand="lg" collapseOnSelect>
         <Container>
-          <Navbar.Brand href="/">
-            <h4><Brand/></h4>
-          </Navbar.Brand>
+          <LinkContainer to='/'>
+            <Navbar.Brand>
+              <h4><Brand/></h4>
+            </Navbar.Brand>
+          </LinkContainer>
           <Navbar.Toggle aria-controls="navbarScroll" />
           <Navbar.Collapse id="navbarScroll">
             <Nav className="me-auto my-2 my-lg-0" style={{ maxHeight: '100px' }} navbarScroll>
+            <LinkContainer to='/login'>
               <Nav.Link href="/login"><i className="fa-regular fa-user"></i> Login</Nav.Link>
+            </LinkContainer>
+            <LinkContainer to='/cart'>
               <Nav.Link href="/cart"><i className="fa-solid fa-cart-shopping"></i> Cart</Nav.Link>
+            </LinkContainer>
             </Nav>
+            <LinkContainer to='/'>
+              <Navbar.Brand href="/">
+                <img src={logo} width="45" className="d-inline-block align-top" alt="Logo"/>
+              </Navbar.Brand>
+            </LinkContainer>
           </Navbar.Collapse>
-          {/* <Navbar.Brand href="/">
-            <img src={logo} width="45" className="d-inline-block align-top" alt="Logo"/>
-          </Navbar.Brand> */}
         </Container>
       </Navbar>
     </header>
