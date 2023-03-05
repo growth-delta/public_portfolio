@@ -4,7 +4,7 @@ import { Row, Col, Image, ListGroup, Button, Card } from 'react-bootstrap'
 import Rating from '../components/Rating'
 import products from '../products'
 
-function ProductScreen({}) {
+function ProductScreen() {
     const { id } = useParams();
     const product = products.find((p) => p._id === id);
     return (
@@ -48,19 +48,15 @@ function ProductScreen({}) {
                                 </Row>
                                 <br></br>
                                 <Row>
-                                    <Button className='btn btn-success btn-block' type='button'>Add to Cart</Button>
+                                    <Button className='btn btn-success btn-block' disabled={product.countInStock === 0} type='button'>Add to Cart</Button>
                                 </Row>
                             </ListGroup.Item> 
                         </ListGroup>
                     </Card>  
                 </Col>
             </Row>
-            <br></br>
-            <br></br>
-            <br></br>
-            <br></br>
         </div>
     )
-}
+};
 
-export default ProductScreen
+export default ProductScreen;

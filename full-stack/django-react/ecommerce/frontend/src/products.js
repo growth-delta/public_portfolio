@@ -7,7 +7,7 @@ const products = [
       'brand': 'Freedom Forged',
       'category': 'Hardware',
       'price': 9.99,
-      'countInStock': 100,
+      'countInStock': 0,
       'rating': 5,
       'numReviews': 120,
     },
@@ -71,6 +71,6 @@ const products = [
       'rating': 3,
       'numReviews': 15,
     },
-  ]
+  ];
 
-  export default products
+  export default products;
